@@ -1,11 +1,11 @@
 directory,file_name,variable_name,variable_type,description
 data/,drillingdata.rda,date_of_drilling,character,The date when drilling was carried out.
-data/,drillingdata.rda,water_point_created,character,"Indicates whether the water point has been created (""Yes"" or ""No"")."
+data/,drillingdata.rda,water_point_created,character,Indicates whether the water point has been created
 data/,drillingdata.rda,latitude,numeric,The geographic latitude of the drilling site.
 data/,drillingdata.rda,longtude,numeric,The geographic longitude of the drilling site.
-data/,drillingdata.rda,use_of_waterpoint,character,"The intended use of the water point (e.g., for drinking, irrigation, etc.)."
+data/,drillingdata.rda,use_of_waterpoint,character,The intended use of the water point
 data/,drillingdata.rda,other_useage,character,Any additional usage of the water point not covered by the standard categories.
-data/,drillingdata.rda,funding_source,character,"The source of funding for the drilling project (e.g., government, NGO, private)."
+data/,drillingdata.rda,funding_source,character,The source of funding for the drilling project
 data/,drillingdata.rda,wrb1a_form_completed,character,Indicates whether the WRB1A form for the drilling project has been completed.
 data/,drillingdata.rda,contract_signed,character,Whether a contract has been signed for the drilling project.
 data/,drillingdata.rda,community_agreement,character,Whether an agreement with the community has been made regarding the water point.
@@ -15,10 +15,10 @@ data/,drillingdata.rda,driller_licensed,character,Indicates whether the driller 
 data/,drillingdata.rda,staff_experienced,character,Indicates whether the staff involved in the drilling project are experienced.
 data/,drillingdata.rda,drilling_rig_model,character,The model of the drilling rig used for the project.
 data/,drillingdata.rda,compressor_specs,character,Specifications of the compressor used during the drilling.
-data/,drillingdata.rda,equipment_condition,character,"The condition of the drilling equipment (e.g., new, used, needs repair)."
+data/,drillingdata.rda,equipment_condition,character,The condition of the drilling equipment
 data/,drillingdata.rda,safety_features_condition,character,The condition of the safety features of the equipment.
 data/,drillingdata.rda,equipment_capability,character,The overall capability of the equipment used in drilling.
-data/,drillingdata.rda,equipment_capability_specs,character,Specifications related to the equipment’s capabilities.
+data/,drillingdata.rda,equipment_capability_specs,character,Specifications related to the equipments capabilities.
 data/,drillingdata.rda,ppe_available,character,Indicates whether personal protective equipment (PPE) is available for the workers.
 data/,drillingdata.rda,drilling_equipment_image,character,An image of the drilling equipment used in the project.
 data/,drillingdata.rda,location_selection_methodology,character,The methodology used to select the drilling location.
@@ -27,11 +27,11 @@ data/,drillingdata.rda,geophysical_survey_done,character,Indicates whether a geo
 data/,drillingdata.rda,min_distance_50m_from_contamination,character,The minimum distance (in meters) the drilling site is from contamination sources (50 meters or more).
 data/,drillingdata.rda,distance_from_contamination,character,The distance of the drilling site from any contamination sources.
 data/,drillingdata.rda,location_accessible,character,Indicates whether the site is accessible for drilling.
-data/,drillingdata.rda,location_suitable_for_drilling,character,"Indicates whether the site is suitable for drilling (e.g., no obstacles)."
-data/,drillingdata.rda,distance_from_water_bodies,character,"The distance of the drilling site from nearby water bodies (rivers, lakes, etc.)."
+data/,drillingdata.rda,location_suitable_for_drilling,character,Indicates whether the site is suitable for drilling
+data/,drillingdata.rda,distance_from_water_bodies,character,The distance of the drilling site from nearby water bodies
 data/,drillingdata.rda,location_photo,character,A photograph of the drilling site location.
 data/,drillingdata.rda,perimeter_fence,character,Indicates whether there is a perimeter fence around the site for security.
-data/,drillingdata.rda,staff_protected,character,"Indicates whether the staff are protected from potential risks (e.g., fencing, safety measures)."
+data/,drillingdata.rda,staff_protected,character,Indicates whether the staff are protected from potential risks
 data/,drillingdata.rda,parking_area,character,Indicates whether a parking area is available for vehicles at the site.
 data/,drillingdata.rda,emergency_access,character,Indicates whether there is easy emergency access to the site.
 data/,drillingdata.rda,suitable_distance_from_power_lines,character,Indicates whether the site is located at a suitable distance from power lines.
@@ -40,11 +40,11 @@ data/,drillingdata.rda,materials_stored_safely,character,Indicates whether the m
 data/,drillingdata.rda,chemicals_stored_safely,character,Indicates whether chemicals are stored safely on-site.
 data/,drillingdata.rda,first_aid_kit,character,Indicates whether a first aid kit is available at the site.
 data/,drillingdata.rda,fire_extinguisher,character,Indicates whether a fire extinguisher is available at the site.
-data/,drillingdata.rda,adquate_welfare_facilities,character,"Indicates whether the welfare facilities (toilets, etc.) are adequate for the workers."
-data/,drillingdata.rda,welfare_facilities_distance,character,"The distance of the welfare facilities (e.g., toilets) from the drilling site."
+data/,drillingdata.rda,adquate_welfare_facilities,character,Indicates whether the welfare facilities are adequate for the workers.
+data/,drillingdata.rda,welfare_facilities_distance,character,The distance of the welfare facilitiesfrom the drilling site.
 data/,drillingdata.rda,site_setup_preliminaries_completed,character,Indicates whether the preliminary setup activities for drilling have been completed.
 data/,drillingdata.rda,rig_setup_properly,character,Indicates whether the drilling rig has been set up properly.
-data/,drillingdata.rda,reference_point,character,A reference point used for the drilling site’s coordinates or location.
+data/,drillingdata.rda,reference_point,character,A reference point used for the drilling sites coordinates or location.
 data/,drillingdata.rda,reference_point_height,numeric,The height of the reference point above or below sea level.
 data/,drillingdata.rda,rig_level_method,character,The method used to level the drilling rig at the site.
 data/,drillingdata.rda,rig_setup_problems,character,Any issues encountered during the setup of the drilling rig.
@@ -54,7 +54,7 @@ data/,drillingdata.rda,min_diameter_177mm,character,The minimum diameter of the 
 data/,drillingdata.rda,min_diameter,character,The minimum diameter of the borehole for drilling.
 data/,drillingdata.rda,casing_stored_properly,character,Indicates whether the casing materials are stored properly.
 data/,drillingdata.rda,where_stored,character,The location where the casing materials are stored.
-data/,drillingdata.rda,why_not_properly_stored,logical,Indicates why the casing materials were not stored properly (if applicable).
+data/,drillingdata.rda,why_not_properly_stored,logical,Indicates why the casing materials were not stored properly.
 data/,drillingdata.rda,index_1,numeric,An index value for referencing in the dataset.
 data/,drillingdata.rda,rod_number,numeric,The number of rods used during the drilling process.
 data/,drillingdata.rda,depth_from_1,numeric,The starting depth (in meters) for the first drilling operation.
@@ -77,7 +77,7 @@ data/,drillingdata.rda,rock_or_soil_type,character,The type of rock or soil enco
 data/,drillingdata.rda,colour,character,The color of the rock or soil encountered during drilling.
 data/,drillingdata.rda,weathering,character,The level of weathering observed in the rock or soil encountered.
 data/,drillingdata.rda,grain_size_description,character,A description of the grain size of the soil or rock.
-data/,drillingdata.rda,sorting,character,"The sorting characteristics of the soil or rock (e.g., well-sorted, poorly sorted)."
+data/,drillingdata.rda,sorting,character,"The sorting characteristics of the soil or rock (e.g. well-sorted, poorly sorted)."
 data/,drillingdata.rda,additional_description,character,Any additional description related to the geological formation or drilling process.
 data/,drillingdata.rda,formation_name,character,The name of the geological formation encountered during drilling.
 data/,drillingdata.rda,index_4,numeric,An index value for referencing in the dataset.
@@ -87,12 +87,12 @@ data/,drillingdata.rda,discharge_measurement_method,character,The method used to
 data/,drillingdata.rda,ec_ms_cm_1,numeric,The electrical conductivity of the water at the first measurement point (in mS/cm).
 data/,drillingdata.rda,tds_mgl_1,numeric,The total dissolved solids (TDS) in the water at the first measurement point (in mg/L).
 data/,drillingdata.rda,ph_1,numeric,The pH of the water at the first measurement point.
-data/,drillingdata.rda,temp_celcius_1,numeric,The temperature of the water at the first measurement point (in °C).
-data/,drillingdata.rda,comments_1,character,"Comments related to the first measurement point (e.g., water quality, observations)."
+data/,drillingdata.rda,temp_celcius_1,numeric,The temperature of the water at the first measurement point (in Celcius).
+data/,drillingdata.rda,comments_1,character,"Comments related to the first measurement point (e.g. water quality, observations)."
 data/,drillingdata.rda,borehole_depth_miters,numeric,The total depth of the borehole (in meters).
 data/,drillingdata.rda,water_level,numeric,The water level in the borehole after drilling (in meters).
 data/,drillingdata.rda,measurement_date,character,"The date when measurements were taken for water level, discharge, etc."
-data/,drillingdata.rda,borehole_suitable_further_use,character,"Whether the borehole is suitable for further use (e.g., for a pump, additional development)."
+data/,drillingdata.rda,borehole_suitable_further_use,character,"Whether the borehole is suitable for further use (e.g. for a pump, additional development)."
 data/,drillingdata.rda,installation_design_available,character,Whether a design is available for installing equipment in the borehole.
 data/,drillingdata.rda,design_agreed_by_driller,character,Whether the design was agreed upon by the driller.
 data/,drillingdata.rda,date_casing_installation,character,The date when the casing was installed in the borehole.
@@ -124,7 +124,7 @@ data/,drillingdata.rda,gravel_pack_final_level,numeric,The final level of the gr
 data/,drillingdata.rda,static_water_level_pre_dev,numeric,The static water level before development work begins (in meters).
 data/,drillingdata.rda,index_11,numeric,An index value for referencing in the dataset.
 data/,drillingdata.rda,duration,numeric,The total duration of the drilling process (in hours or days).
-data/,drillingdata.rda,method,character,"The method used for the drilling process (e.g., rotary, percussion)."
+data/,drillingdata.rda,method,character,"The method used for the drilling process (e.g. rotary, percussion)."
 data/,drillingdata.rda,index_12,numeric,An index value for referencing in the dataset.
 data/,drillingdata.rda,time,numeric,The amount of time taken for specific drilling operations (in minutes).
 data/,drillingdata.rda,lift_depth,numeric,The depth at which the lift occurs during the drilling operation (in meters).
@@ -132,7 +132,7 @@ data/,drillingdata.rda,discharge_rate,numeric,The discharge rate of water from t
 data/,drillingdata.rda,ec_ms_cm_3,numeric,The electrical conductivity of the water at a later measurement point (in mS/cm).
 data/,drillingdata.rda,tds_mg_l_2,numeric,The total dissolved solids (TDS) in the water at a later measurement point (in mg/L).
 data/,drillingdata.rda,ph_3,numeric,The pH of the water at a later measurement point.
-data/,drillingdata.rda,temp_c_2,numeric,The temperature of the water at a later measurement point (in °C).
+data/,drillingdata.rda,temp_c_2,numeric,The temperature of the water at a later measurement point (in Celcius).
 data/,drillingdata.rda,turbidity_ntu,numeric,The turbidity of the water (cloudiness) measured in NTU (Nephelometric Turbidity Units).
 data/,drillingdata.rda,sediment,character,The amount or type of sediment in the water at a later measurement point.
 data/,drillingdata.rda,static_water_level_post_dev,numeric,The static water level after development work is done (in meters).
