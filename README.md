@@ -16,54 +16,60 @@ various borehole sites and includes a wide range of attributes covering
 the full lifecycle of a drilling project — from planning and site setup
 to borehole development and evaluation.
 
-Key Components: Administrative & Contextual Info: Includes the date of
-drilling, GPS coordinates, purpose of the water point, funding source,
-and responsible contractors.
+**Key Components**
 
-Pre-Drilling Activities: Captures site selection methodologies,
-availability of government supervisors, community agreements,
-hydrogeological studies, and geophysical survey results.
+1.  **Administrative & Contextual Info:** Includes the date of drilling,
+    GPS coordinates, purpose of the water point, funding source, and
+    responsible contractors.
 
-Site & Equipment Setup: Details on rig setup, equipment condition,
-safety features, PPE availability, site accessibility, and distance from
-potential contamination sources.
+2.  **Pre-Drilling Activities:** Captures site selection methodologies,
+    availability of government supervisors, community agreements,
+    hydrogeological studies, and geophysical survey results.
 
-Drilling Operations: Documents the type of rig used, compressor specs,
-drill rod length, drilling method, bit type, borehole diameter, depth
-intervals, and drilling time.
+3.  **Site & Equipment Setup:** Details on rig setup, equipment
+    condition, safety features, PPE availability, site accessibility,
+    and distance from potential contamination sources.
 
-Hydrogeological Observations: Tracks water strikes, rock/soil
-formations, grain size, sorting, weathering, and additional geological
-descriptions.
+4.  **Drilling Operations:** Documents the type of rig used, compressor
+    specs, drill rod length, drilling method, bit type, borehole
+    diameter, depth intervals, and drilling time.
 
-Borehole Development & Testing: Includes discharge rates, EC, TDS, pH,
-temperature, turbidity, sediment, and static water levels (pre and post
-development).
+5.  **Hydrogeological Observations:** Tracks water strikes, rock/soil
+    formations, grain size, sorting, weathering, and additional
+    geological descriptions.
 
-Casing & Installation Details: Information on casing materials,
-diameters, slot aperture, gravel pack quality, and final borehole
-design.
+6.  **Borehole Development & Testing:** Includes discharge rates, EC,
+    TDS, pH, temperature, turbidity, sediment, and static water levels
+    (pre and post development).
 
-Safety & Environmental Checks: Evaluates welfare facilities, fire
-extinguishers, first aid kits, equipment protection, and chemical
-storage practices.
+7.  **Casing & Installation Details:** Information on casing materials,
+    diameters, slot aperture, gravel pack quality, and final borehole
+    design.
 
-Multimedia Links: Some entries include links to images from the drilling
-sites hosted on the mWater platform.
+8.  **Safety & Environmental Checks:** Evaluates welfare facilities,
+    fire extinguishers, first aid kits, equipment protection, and
+    chemical storage practices.
 
-Example Use Cases: Analyzing factors that affect borehole success rates.
+9.  **Multimedia Links:** Some entries include links to images from the
+    drilling sites hosted on the mWater platform.
 
-Tracking contractor compliance with safety and environmental standards.
+**Example Use Cases:**
 
-Evaluating relationships between hydro-geological conditions and
-borehole performance.
+- Analyzing factors that affect borehole success rates.
 
-Enhancing water resource planning and monitoring in rural development
-contexts.
+- Tracking contractor compliance with safety and environmental
+  standards.
 
-Note: This dataset contains blank or missing values in some fields,
-especially where data collection was not applicable. Users should apply
-appropriate data cleaning and preprocessing methods before analysis.
+- Evaluating relationships between hydro-geological conditions and
+  borehole performance.
+
+- Enhancing water resource planning and monitoring in rural development
+  contexts.
+
+> Note: This dataset contains blank or missing values in some fields,
+> especially where data collection was not applicable. Users should
+> apply appropriate data cleaning and preprocessing methods before
+> analysis.
 
 ## Installation
 
@@ -118,7 +124,7 @@ drillingdata |>
   gt::as_raw_html()
 ```
 
-<div id="euaiuaukea" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="zrouytojth" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
