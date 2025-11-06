@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Drilling Data (2018–2024)
+# Borehole Drilling and Construction Data – Malawi, 2018
 
 <!-- badges: start -->
 
@@ -10,66 +10,43 @@
 
 <!-- badges: end -->
 
-This dataset captures detailed information from water point drilling
-projects conducted between 2018 and 2024. The data was collected from
-various borehole sites and includes a wide range of attributes covering
-the full lifecycle of a drilling project — from planning and site setup
-to borehole development and evaluation.
+This dataset captures detailed information on borehole drilling and
+construction activities conducted across selected sites in Malawi in
+2018. Data were collected using the mWater digital platform, documenting
+each stage of groundwater development, from site selection and
+hydrogeological studies to drilling operations, borehole design, and
+post-construction assessments.
 
-**Key Components**
+The dataset includes variables on location and site suitability, survey
+and geophysical methods, drilling parameters, equipment and safety
+compliance, geological formations encountered, casing and gravel pack
+details, and initial water quality measurements. Together, these data
+provide a comprehensive technical record of Malawi’s borehole
+development process.
 
-1.  **Administrative & Contextual Info:** Includes the date of drilling,
-    GPS coordinates, purpose of the water point, funding source, and
-    responsible contractors.
+**Potential Use Cases**
 
-2.  **Pre-Drilling Activities:** Captures site selection methodologies,
-    availability of government supervisors, community agreements,
-    hydrogeological studies, and geophysical survey results.
+This dataset is valuable to a wide range of stakeholders, including:
 
-3.  **Site & Equipment Setup:** Details on rig setup, equipment
-    condition, safety features, PPE availability, site accessibility,
-    and distance from potential contamination sources.
+1.  Government Water Departments and District Councils: for monitoring
+    drilling quality, verifying contractor performance, and maintaining
+    an updated inventory of functional water points.
 
-4.  **Drilling Operations:** Documents the type of rig used, compressor
-    specs, drill rod length, drilling method, bit type, borehole
-    diameter, depth intervals, and drilling time.
+2.  Development Partners and NGOs: for planning new water supply
+    interventions, assessing borehole performance, and improving
+    accountability in donor-funded projects.
 
-5.  **Hydrogeological Observations:** Tracks water strikes, rock/soil
-    formations, grain size, sorting, weathering, and additional
-    geological descriptions.
+3.  Hydrogeologists and WASH Engineers: for analyzing aquifer
+    characteristics, drilling efficiency, and the relationship between
+    geology and borehole productivity.
 
-6.  **Borehole Development & Testing:** Includes discharge rates, EC,
-    TDS, pH, temperature, turbidity, sediment, and static water levels
-    (pre and post development).
+4.  Researchers and Academic Institutions: for studying groundwater
+    development practices, environmental sustainability, and data-driven
+    approaches to rural water supply.
 
-7.  **Casing & Installation Details:** Information on casing materials,
-    diameters, slot aperture, gravel pack quality, and final borehole
-    design.
-
-8.  **Safety & Environmental Checks:** Evaluates welfare facilities,
-    fire extinguishers, first aid kits, equipment protection, and
-    chemical storage practices.
-
-9.  **Multimedia Links:** Some entries include links to images from the
-    drilling sites hosted on the mWater platform.
-
-**Example Use Cases:**
-
-- Analyzing factors that affect borehole success rates.
-
-- Tracking contractor compliance with safety and environmental
-  standards.
-
-- Evaluating relationships between hydro-geological conditions and
-  borehole performance.
-
-- Enhancing water resource planning and monitoring in rural development
-  contexts.
-
-> Note: This dataset contains blank or missing values in some fields,
-> especially where data collection was not applicable. Users should
-> apply appropriate data cleaning and preprocessing methods before
-> analysis.
+5.  Policy Makers and Regulators: for strengthening national standards,
+    promoting data transparency, and improving decision-making in the
+    water resources sector.
 
 ## Installation
 
@@ -106,8 +83,10 @@ file from the table below.
 
 ## Data
 
-The package provides access to the Drilling data survey conducted
-between 2018 and 2024
+The package provides access to the variables on location and site
+suitability, survey and geophysical methods, drilling parameters,
+equipment and safety compliance, geological formations encountered,
+casing and gravel pack details, and initial water quality measurements
 
 ``` r
 library(drillingdata)
@@ -115,7 +94,8 @@ library(drillingdata)
 
 ### drillingdata
 
-The dataset `drillingdata` has 152 observations and 138 variables
+The dataset `drillingdata` contains data 152 observations and 138
+variables
 
 ``` r
 drillingdata |> 
@@ -124,7 +104,7 @@ drillingdata |>
   gt::as_raw_html()
 ```
 
-<div id="zrouytojth" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="qtfrwtdyie" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
   &#10;  <table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false" style="-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; display: table; border-collapse: collapse; line-height: normal; margin-left: auto; margin-right: auto; color: #333333; font-size: 16px; font-weight: normal; font-style: normal; background-color: #FFFFFF; width: auto; border-top-style: solid; border-top-width: 2px; border-top-color: #A8A8A8; border-right-style: none; border-right-width: 2px; border-right-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #A8A8A8; border-left-style: none; border-left-width: 2px; border-left-color: #D3D3D3;" bgcolor="#FFFFFF">
   <thead style="border-style: none;">
     <tr class="gt_col_headings" style="border-style: none; border-top-style: solid; border-top-width: 2px; border-top-color: #D3D3D3; border-bottom-style: solid; border-bottom-width: 2px; border-bottom-color: #D3D3D3; border-left-style: none; border-left-width: 1px; border-left-color: #D3D3D3; border-right-style: none; border-right-width: 1px; border-right-color: #D3D3D3;">
@@ -707,1568 +687,2685 @@ For an overview of the variable names, see the following table.
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:200px; ">
 
 <table class="table table-striped" style="margin-left: auto; margin-right: auto;">
+
 <thead>
+
 <tr>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_name
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 variable_type
 </th>
+
 <th style="text-align:left;position: sticky; top:0; background-color: #FFFFFF;">
+
 description
 </th>
+
 </tr>
+
 </thead>
+
 <tbody>
+
 <tr>
+
 <td style="text-align:left;">
+
 date_of_drilling
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The date when drilling was carried out.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 water_point_created
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the water point has been created
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 latitude
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The geographic latitude of the drilling site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 longtude
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The geographic longitude of the drilling site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 use_of_waterpoint
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The intended use of the water point
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 other_useage
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Any additional usage of the water point not covered by the standard
 categories.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 funding_source
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The source of funding for the drilling project
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 wrb1a_form_completed
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the WRB1A form for the drilling project has been
 completed.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 contract_signed
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether a contract has been signed for the drilling project.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 community_agreement
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether an agreement with the community has been made regarding the
 water point.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 gov_supervisor_available
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether a government supervisor is available during the
 drilling process.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 drilling_contractor
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The name of the contractor responsible for the drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 driller_licensed
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the driller is licensed to carry out the drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 staff_experienced
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the staff involved in the drilling project are
 experienced.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 drilling_rig_model
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The model of the drilling rig used for the project.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 compressor_specs
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Specifications of the compressor used during the drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 equipment_condition
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The condition of the drilling equipment
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 safety_features_condition
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The condition of the safety features of the equipment.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 equipment_capability
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The overall capability of the equipment used in drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 equipment_capability_specs
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Specifications related to the equipments capabilities.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ppe_available
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether personal protective equipment (PPE) is available for
 the workers.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 drilling_equipment_image
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 An image of the drilling equipment used in the project.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_selection_methodology
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The methodology used to select the drilling location.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 hydrogeological_study_done
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether a hydrogeological study has been done at the drilling
 site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 geophysical_survey_done
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether a geophysical survey has been done at the site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 min_distance_50m_from_contamination
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The minimum distance (in meters) the drilling site is from contamination
 sources (50 meters or more).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 distance_from_contamination
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The distance of the drilling site from any contamination sources.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_accessible
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the site is accessible for drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_suitable_for_drilling
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the site is suitable for drilling
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 distance_from_water_bodies
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The distance of the drilling site from nearby water bodies
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 location_photo
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 A photograph of the drilling site location.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 perimeter_fence
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether there is a perimeter fence around the site for
 security.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 staff_protected
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the staff are protected from potential risks
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 parking_area
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether a parking area is available for vehicles at the site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 emergency_access
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether there is easy emergency access to the site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 suitable_distance_from_power_lines
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the site is located at a suitable distance from power
 lines.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 distance
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The distance from a reference point or key feature to the drilling site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 materials_stored_safely
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the materials are stored safely at the site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 chemicals_stored_safely
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether chemicals are stored safely on-site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 first_aid_kit
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether a first aid kit is available at the site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 fire_extinguisher
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether a fire extinguisher is available at the site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 adquate_welfare_facilities
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the welfare facilities are adequate for the workers.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 welfare_facilities_distance
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The distance of the welfare facilitiesfrom the drilling site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 site_setup_preliminaries_completed
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the preliminary setup activities for drilling have
 been completed.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rig_setup_properly
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the drilling rig has been set up properly.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 reference_point
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 A reference point used for the drilling sites coordinates or location.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 reference_point_height
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The height of the reference point above or below sea level.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rig_level_method
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The method used to level the drilling rig at the site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rig_setup_problems
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Any issues encountered during the setup of the drilling rig.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 setup_problems
 </td>
+
 <td style="text-align:left;">
+
 logical
 </td>
+
 <td style="text-align:left;">
+
 Boolean indicating whether any setup problems were encountered.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 drill_rod_length
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The length of the drill rods used in the drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 min_diameter_177mm
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The minimum diameter of the borehole (177mm).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 min_diameter
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The minimum diameter of the borehole for drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 casing_stored_properly
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the casing materials are stored properly.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 where_stored
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The location where the casing materials are stored.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 why_not_properly_stored
 </td>
+
 <td style="text-align:left;">
+
 logical
 </td>
+
 <td style="text-align:left;">
+
 Indicates why the casing materials were not stored properly.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rod_number
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The number of rods used during the drilling process.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_from_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The starting depth (in meters) for the first drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_to_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The ending depth (in meters) for the first drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 circulation_method
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The method used for circulating fluids during drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 drill_bit_type
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The type of drill bit used during drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 drilling_diameter_mm
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The diameter of the borehole in millimeters.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 time_taken_in_minutes
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The total time taken for drilling (in minutes).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 drilling_comments
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Comments related to the drilling process.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 water_strike_in_miters
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The depth at which water was first encountered during drilling (in
 meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_2
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_from_2
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The starting depth (in meters) for the second drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_to_2
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The ending depth (in meters) for the second drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 temp_casing_material
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The material used for the temporary casing in the borehole.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 temp_casing_diameter
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The diameter of the temporary casing (in millimeters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_3
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_from_3
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The starting depth (in meters) for the third drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_to_3
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The ending depth (in meters) for the third drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 rock_or_soil_type
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The type of rock or soil encountered at the drilling site.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 colour
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The color of the rock or soil encountered during drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 weathering
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The level of weathering observed in the rock or soil encountered.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 grain_size_description
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 A description of the grain size of the soil or rock.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 sorting
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The sorting characteristics of the soil or rock (e.g. well-sorted,
 poorly sorted).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 additional_description
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Any additional description related to the geological formation or
 drilling process.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 formation_name
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The name of the geological formation encountered during drilling.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_4
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 hole_depth_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The depth of the hole for the first section of drilling (in meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 discharge_rate_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The discharge rate of water from the borehole (in liters per minute or
 other units).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 discharge_measurement_method
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The method used to measure the discharge rate of the borehole.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ec_ms_cm_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The electrical conductivity of the water at the first measurement point
 (in mS/cm).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 tds_mgl_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The total dissolved solids (TDS) in the water at the first measurement
 point (in mg/L).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ph_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The pH of the water at the first measurement point.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 temp_celcius_1
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The temperature of the water at the first measurement point (in
 Celcius).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 comments_1
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Comments related to the first measurement point (e.g. water quality,
 observations).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 borehole_depth_miters
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The total depth of the borehole (in meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 water_level
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The water level in the borehole after drilling (in meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 measurement_date
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The date when measurements were taken for water level, discharge, etc.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 borehole_suitable_further_use
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether the borehole is suitable for further use (e.g. for a pump,
 additional development).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 installation_design_available
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether a design is available for installing equipment in the borehole.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 design_agreed_by_driller
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether the design was agreed upon by the driller.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 date_casing_installation
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The date when the casing was installed in the borehole.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 materials_meet_standards
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether the materials used in the drilling process meet established
 standards.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 materials_pre_inspected
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether the materials used in the drilling process were pre-inspected.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 Index (8)
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 inner_diameter
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The inner diameter of the casing (in millimeters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 outer_diameter
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The outer diameter of the casing (in millimeters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 material_1
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The material used for the first section of the casing.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 slot_aperture
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The size of the slot aperture in the casing (in millimeters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 end_cap_fitted
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether an end cap was fitted to the casing.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 centralisers_fitted
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Whether centralizers were fitted in the borehole casing.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 casing_connection_type
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The type of connection used for the casing segments (e.g., threaded,
 welded).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_9
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_from_4
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The starting depth (in meters) for the fourth drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_to_4
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The ending depth (in meters) for the fourth drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 casing_inner_diameter
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The inner diameter of the casing (in millimeters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 casing_material
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The material of the casing used for the borehole.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 casing_material_strength
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The strength of the casing material used in the borehole.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 slotted
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the casing is slotted for water entry.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 gravel_pack_clean
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 Indicates whether the gravel pack is clean and free of contaminants.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 gravel_pack_quality
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The quality of the gravel pack used in the borehole.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_10
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_from_5
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The starting depth (in meters) for the fifth drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 depth_to_5
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The ending depth (in meters) for the fifth drilling operation.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 gravel_min_grain_size
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The minimum grain size of the gravel used in the pack (in millimeters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 gravel_max_grain_size
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The maximum grain size of the gravel used in the pack (in millimeters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 gravel_pack_final_level
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The final level of the gravel pack after installation (in meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 static_water_level_pre_dev
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The static water level before development work begins (in meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_11
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 duration
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The total duration of the drilling process (in hours or days).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 method
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The method used for the drilling process (e.g. rotary, percussion).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 index_12
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 An index value for referencing in the dataset.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 time
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The amount of time taken for specific drilling operations (in minutes).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 lift_depth
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The depth at which the lift occurs during the drilling operation (in
 meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 discharge_rate
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The discharge rate of water from the borehole at a later measurement
 point (in liters per minute).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ec_ms_cm_3
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The electrical conductivity of the water at a later measurement point
 (in mS/cm).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 tds_mg_l_2
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The total dissolved solids (TDS) in the water at a later measurement
 point (in mg/L).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 ph_3
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The pH of the water at a later measurement point.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 temp_c_2
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The temperature of the water at a later measurement point (in Celcius).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 turbidity_ntu
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The turbidity of the water (cloudiness) measured in NTU (Nephelometric
 Turbidity Units).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 sediment
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 The amount or type of sediment in the water at a later measurement
 point.
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 static_water_level_post_dev
 </td>
+
 <td style="text-align:left;">
+
 numeric
 </td>
+
 <td style="text-align:left;">
+
 The static water level after development work is done (in meters).
 </td>
+
 </tr>
+
 <tr>
+
 <td style="text-align:left;">
+
 final_borehole_design_summary
 </td>
+
 <td style="text-align:left;">
+
 character
 </td>
+
 <td style="text-align:left;">
+
 A summary of the final borehole design, including all technical and
 engineering details.
 </td>
+
 </tr>
+
 </tbody>
+
 </table>
 
 </div>
@@ -2278,29 +3375,26 @@ engineering details.
 ``` r
 library(drillingdata)
 
-# Example code to display a bar graph for the boreholes drilled per year
+# Histogram of Borehole Depths
+# Load required packages
 library(ggplot2)
-library(lubridate)
 library(dplyr)
 
-# Convert 'date_of_drilling' to Date format and extract the year
-drillingdata$year <- year(mdy(drillingdata$date_of_drilling))
+# prepare data
+boreholes_clean <- drillingdata %>%
+  mutate(depth_m = as.numeric(borehole_depth_miters)) %>%
+  filter(!is.na(depth_m))  # remove missing values
 
-# Count number of boreholes drilled per year
-boreholes_per_year <- drillingdata %>%
-  filter(!is.na(year)) %>%
-  group_by(year) %>%
-  summarise(boreholes_drilled = n())
-
-# Create the bar plot
-ggplot(boreholes_per_year, aes(x = factor(year), y = boreholes_drilled)) +
-  geom_col(fill = "red") +
-  theme_minimal() +
+# Plot graph
+ggplot(boreholes_clean, aes(x = depth_m)) +
+  geom_histogram(binwidth = 10, fill = "skyblue", color = "black", alpha = 0.8) +
   labs(
-    title = "Boreholes Drilled Per Year",
-    x = "Year",
-    y = "Number of Boreholes Drilled"
-  )
+    title = "Distribution of Borehole Depths",
+    subtitle = "Number of boreholes in different depth ranges",
+    x = "Borehole Depth (meters)",
+    y = "Number of Boreholes"
+  ) +
+  theme_minimal(base_size = 14)
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" style="display: block; margin: auto;" />
@@ -2318,16 +3412,16 @@ Please cite this package using:
 citation("drillingdata")
 #> To cite package 'drillingdata' in publications use:
 #> 
-#>   Mhango E, Rattray J, MacLeod S, Nyasulu G, Chisunkha T, Musopole G,
-#>   Hamis A, Bwanyula F (2025). _drillingdata: What the Package Does (One
-#>   Line, Title Case)_. R package version 0.0.0.9000,
+#>   Mhango E, Rattray J, MacLeod S, Bwanyula F (2025). _drillingdata:
+#>   Borehole Drilling and Construction Data – Malawi, 2018 - 2024_. R
+#>   package version 0.0.0.9000,
 #>   <https://github.com/openwashdata/drillingdata>.
 #> 
 #> A BibTeX entry for LaTeX users is
 #> 
 #>   @Manual{,
-#>     title = {drillingdata: What the Package Does (One Line, Title Case)},
-#>     author = {Emmanuel Mhango and Jamie Rattray and Shaun MacLeod and Given Nyasulu and Temwani Chisunkha and Gloria Musopole and Agnes Hamis and Feston Bwanyula},
+#>     title = {drillingdata: Borehole Drilling and Construction Data – Malawi, 2018 - 2024},
+#>     author = {Emmanuel Mhango and Jamie Rattray and Shaun MacLeod and Feston Bwanyula},
 #>     year = {2025},
 #>     note = {R package version 0.0.0.9000},
 #>     url = {https://github.com/openwashdata/drillingdata},
