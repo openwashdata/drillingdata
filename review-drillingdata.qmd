@@ -1,0 +1,101 @@
+---
+title: "drillingdata: Package review"
+author: "Colin Walder"
+format: html
+---
+
+```{r, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(DataExplorer)
+package_data <- read_csv("drillingdata/drillingdata.csv")
+```
+
+# General Information and Metadata
+
+- The Title and Description fields are missing in DESCRIPTION.
+
+# Data Content & Quality
+
+## General comments
+
+- Correct spelling of both variables names (e.g., longtude) and answer options where applicable.
+- `other_useage` refers to `use_of_waterpoint.` Make sure that's clear for all variables, e.g., rename it to `use_of_waterpoint_other`.
+- Try to standardize answer options in `funding_source`, `drilling_contractor`, `drilling_rig_model`, `compressor_specs` as much as possible.
+- Make sure NAs are actually NAs and not "NA" or "N/A" (see, for example, `wr1ba_form_completed`).
+- The links are not available for `drilling_equipment_image.`, `location_photo`, `final_borehole_design_summary`. Please delete these columns if the links can't be made permanent.
+
+```{r, eval=FALSE}
+# create_report is the main function from the DataExplorer package (see https://boxuancui.github.io/DataExplorer/)
+# run it to get a quick overview of your data
+create_report(package_data)
+```
+
+- For `water_point_created`, all values are "Yes". Please remove.
+
+```{r}
+count(package_data, water_point_created)
+```
+
+- Why are there NAs in `contract_signed`? The same goes for `community_agreement`.
+
+```{r}
+count(package_data, contract_signed)
+```
+
+- For 68 variables all values are NA. Either add values to these columns or delete the columns as they don't add any information for now.
+
+```{r}
+find_all_na_columns <- function(df) {
+  names(df)[colSums(is.na(df)) == nrow(df)]
+}
+
+empty_variables <- find_all_na_columns(package_data)
+
+empty_variables
+```
+
+```{r}
+length(empty_variables)
+```
+
+- `gravel_pack_final_level` seems to be skewed. Please double-check.
+
+```{r}
+hist(package_data$gravel_pack_final_level)
+
+quantile(package_data$gravel_pack_final_level, probs = seq(0,1,0.1), na.rm = TRUE)
+```
+
+- `static_water_level_pre_dev` seems to be skewed. Please double-check.
+
+```{r}
+hist(package_data$static_water_level_pre_dev)
+
+quantile(package_data$static_water_level_pre_dev, probs = seq(0,1,0.1), na.rm = TRUE)
+```
+
+- `static_water_level_post_dev` seems to be skewed. Please double-check.
+
+```{r}
+hist(package_data$static_water_level_post_dev)
+
+quantile(package_data$static_water_level_post_dev, probs = seq(0,1,0.1), na.rm = TRUE)
+```
+
+- For `distance`, some answer options are duplicated. The same goes for `other_useage`, `welfare_facilities_distance`, `min_diameter`, `where_stored.` Please standardize the answer options.
+
+```{r}
+unique(package_data$distance)
+```
+
+# Data Processing
+
+- Delete all code that is commented out if it's not used later in the script.
+- Why are there some many rows with NAs in latitude?
+- Remove `check_utf8()`. This is not part of the data processing, also considering that there are no non-UTF-8 characters found in the dataset when running the function.
+- As a result, also delete the conversion from Latin1 to UTF-8 (lines 56-66).
+- Delete lines starting from line 88 to the end as data visualization is not part of the data processing.
+
+# Documentation
+
+- Please add a second visualization with a map to show the users that the data is geo-referenced. 

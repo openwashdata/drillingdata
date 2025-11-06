@@ -85,24 +85,3 @@ openxlsx::write.xlsx(drillingdata,
                      here::here("inst", "extdata", paste0("drillingdata",
                                                           ".xlsx")))
 
-# Display a chart for the boreholes drilled per year ---------------------------
-# Convert 'date_of_drilling' to Date format and extract the year
-drillingdata$year <- year(mdy(drillingdata$date_of_drilling))
-
-# Count number of boreholes drilled per year
-boreholes_per_year <- drillingdata %>%
-  filter(!is.na(year)) %>%
-  group_by(year) %>%
-  summarise(boreholes_drilled = n())
-
-# Create the bar plot
-ggplot(boreholes_per_year, aes(x = factor(year), y = boreholes_drilled)) +
-  geom_col(fill = "red") +
-  theme_minimal() +
-  labs(
-    title = "Boreholes Drilled Per Year",
-    x = "Year",
-    y = "Number of Boreholes Drilled"
-  )
-
-
