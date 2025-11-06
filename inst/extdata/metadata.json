@@ -1,0 +1,36 @@
+{
+  "@context": "https://openwashdata.org/",
+  "@type": "Dataset",
+  "name": "drillingdata",
+  "description": "This dataset captures detailed information on borehole drilling and construction activities conducted across selected sites in Malawi in 2018. Data were collected using the mWater digital platform, documenting each stage of groundwater development, from site selection and hydrogeological studies to drilling operations, borehole design, and post-construction assessments.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "openwashdata @ Global Health Engineering, ETH Zurich",
+    "url": "https://openwashdata.org/"
+  },
+  "datePublished": "2025-11-06",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "keywords": null,
+  "distribution": {
+    "@type": "DataDownload",
+    "url": "https://raw.githubusercontent.com/openwashdata/drillingdata/main/inst/extdata/drillingdata.csv",
+    "contentUrl": "https://raw.githubusercontent.com/openwashdata/drillingdata/main/inst/extdata/drillingdata.csv",
+    "encodingFormat": "text/csv"
+  },
+  "encodingFormat": "CSV",
+  "version": "1.0",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": null
+  },
+  "temporalCoverage": {
+    "@type": "DateTime",
+    "startDate": null,
+    "endDate": null
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "Emmanuel Mhango",
+    "email": "emmanuellmhango@gmail.com"
+  }
+}

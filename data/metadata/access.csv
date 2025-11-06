@@ -1,0 +1,3 @@
+fileName,name,contentUrl,encodingFormat
+drillingdata.csv,drillingdata,https://raw.githubusercontent.com/openwashdata/drillingdata/main/inst/extdata/drillingdata.csv,csv
+drillingdata.xlsx,drillingdata,https://raw.githubusercontent.com/openwashdata/drillingdata/main/inst/extdata/drillingdata.xlsx,ooxml
