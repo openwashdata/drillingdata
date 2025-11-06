@@ -1,0 +1,187 @@
+---
+output: github_document
+always_allow_html: true
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: console
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%",
+  message = FALSE,
+  warning = FALSE,
+  fig.retina = 2,
+  fig.align = 'center'
+)
+```
+
+# Borehole Drilling and Construction Data – Malawi, 2018
+
+<!-- badges: start -->
+
+[![License: CC BY
+4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
+
+[![DOI](https://zenodo.org/badge/962516844.svg)](https://doi.org/10.5281/zenodo.17543305)
+<!-- badges: end -->
+
+This dataset captures detailed information on borehole drilling and
+construction activities conducted across selected sites in Malawi in
+2018. Data were collected using the mWater digital platform, documenting
+each stage of groundwater development, from site selection and
+hydrogeological studies to drilling operations, borehole design, and
+post-construction assessments.
+
+The dataset includes variables on location and site suitability, survey
+and geophysical methods, drilling parameters, equipment and safety
+compliance, geological formations encountered, casing and gravel pack
+details, and initial water quality measurements. Together, these data
+provide a comprehensive technical record of Malawi’s borehole
+development process.
+
+**Potential Use Cases**
+
+This dataset is valuable to a wide range of stakeholders, including:
+
+1.  Government Water Departments and District Councils: for monitoring
+    drilling quality, verifying contractor performance, and maintaining
+    an updated inventory of functional water points.
+
+2.  Development Partners and NGOs: for planning new water supply
+    interventions, assessing borehole performance, and improving
+    accountability in donor-funded projects.
+
+3.  Hydrogeologists and WASH Engineers: for analyzing aquifer
+    characteristics, drilling efficiency, and the relationship between
+    geology and borehole productivity.
+
+4.  Researchers and Academic Institutions: for studying groundwater
+    development practices, environmental sustainability, and data-driven
+    approaches to rural water supply.
+
+5.  Policy Makers and Regulators: for strengthening national standards,
+    promoting data transparency, and improving decision-making in the
+    water resources sector.
+
+## Installation
+
+You can install the development version of drillingdata from
+[GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("openwashdata/drillingdata")
+```
+
+```{r}
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in your
+    browser.
+2.  Right-click anywhere inside the window and select "Save Page As...".
+3.  Save the file in a folder of your choice.
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+extdata_path <- "https://github.com/openwashdata/drillingdata/raw/main/inst/extdata/"
+
+read_csv("data-raw/dictionary.csv") |> 
+  distinct(file_name) |> 
+  dplyr::mutate(file_name = str_remove(file_name, ".rda")) |> 
+  dplyr::rename(dataset = file_name) |> 
+  mutate(
+    CSV = paste0("[Download CSV](", extdata_path, dataset, ".csv)"),
+    XLSX = paste0("[Download XLSX](", extdata_path, dataset, ".xlsx)")
+  ) |> 
+  knitr::kable()
+
+```
+
+## Data
+
+The package provides access to the variables on location and site suitability, survey and geophysical methods, drilling parameters, equipment and safety compliance, geological formations encountered, casing and gravel pack details, and initial water quality measurements
+
+```{r}
+library(drillingdata)
+```
+
+### drillingdata
+
+The dataset `drillingdata` contains data `r nrow(drillingdata)` observations and `r ncol(drillingdata)` variables
+
+```{r}
+drillingdata |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+For an overview of the variable names, see the following table.
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+readr::read_csv("data-raw/dictionary.csv") |>
+  dplyr::filter(file_name == "drillingdata.rda") |>
+  dplyr::select(variable_name:description) |> 
+  knitr::kable() |> 
+  kableExtra::kable_styling("striped") |> 
+  kableExtra::scroll_box(height = "200px")
+```
+
+## Example
+
+```{r}
+library(drillingdata)
+
+# Histogram of Borehole Depths
+# Load required packages
+library(ggplot2)
+library(dplyr)
+
+# prepare data
+boreholes_clean <- drillingdata %>%
+  mutate(depth_m = as.numeric(borehole_depth_miters)) %>%
+  filter(!is.na(depth_m))  # remove missing values
+
+# Plot graph
+ggplot(boreholes_clean, aes(x = depth_m)) +
+  geom_histogram(binwidth = 10, fill = "skyblue", color = "black", alpha = 0.8) +
+  labs(
+    title = "Distribution of Borehole Depths",
+    subtitle = "Number of boreholes in different depth ranges",
+    x = "Borehole Depth (meters)",
+    y = "Number of Boreholes"
+  ) +
+  theme_minimal(base_size = 14)
+
+```
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+```{r}
+citation("drillingdata")
+```
