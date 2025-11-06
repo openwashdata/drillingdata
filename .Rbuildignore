@@ -4,3 +4,6 @@
 ^LICENSE\.md$
 ^README\.Rmd$
 ^data/metadata$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
