@@ -22,7 +22,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Borehole Drilling and Construction Data – Malawi, 2018
+# Borehole Drilling and Construction Data – Malawi, 2018 - 2024
 
 <!-- badges: start -->
 
@@ -33,8 +33,8 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 This dataset captures detailed information on borehole drilling and
-construction activities conducted across selected sites in Malawi in
-2018. Data were collected using the mWater digital platform, documenting
+construction activities conducted across selected sites in Malawi between 
+2018 and 2024. Data were collected using the mWater digital platform, documenting
 each stage of groundwater development, from site selection and
 hydrogeological studies to drilling operations, borehole design, and
 post-construction assessments.
