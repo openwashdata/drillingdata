@@ -1,5 +1,5 @@
 Package: drillingdata
-Title: Borehole Drilling and Construction Data – Malawi, 2018
+Title: Borehole Drilling and Construction Data – Malawi, 2018 - 2024
 Version: 0.0.0.9000
 Authors@R: c(
     person("Emmanuel", "Mhango", , "emmanuellmhango@gmail.com", role = c("aut", "cre"),
@@ -8,12 +8,7 @@ Authors@R: c(
     person("Shaun", "MacLeod", role = "aut"),
     person("Feston", "Bwanyula", role = "aut")
   )
-Description: This dataset captures detailed information on borehole drilling and
-construction activities conducted across selected sites in Malawi in
-2018. Data were collected using the mWater digital platform, documenting
-each stage of groundwater development, from site selection and
-hydrogeological studies to drilling operations, borehole design, and
-post-construction assessments.
+Description: This dataset captures detailed information on borehole drilling and construction activities conducted across selected sites in Malawi in 2018. Data were collected using the mWater digital platform, documenting each stage of groundwater development, from site selection and hydrogeological studies to drilling operations, borehole design, and post-construction assessments.
 License: CC BY 4.0
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

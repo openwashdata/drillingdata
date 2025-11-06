@@ -1,22 +1,16 @@
-#' Drilling Data 2018 - 2024
-#' 
-#' This dataset captures comprehensive information from water point drilling projects conducted between 2018 and 2024. 
-#' It includes detailed technical, operational, safety, environmental, and administrative data collected during the site preparation, 
-#' drilling, and post-drilling phases.
-#' 
-#' This dataset is instrumental for analyzing trends in borehole productivity, contractor performance, geological conditions, and environmental 
-#' compliance across multiple districts and years. It serves as a foundation for improving decision-making, resource allocation, and the sustainability 
-#' of rural water supply systems.
-#' 
+#' Borehole Drilling and Construction Data – Malawi, 2018 - 2024
+#'
+#' This dataset captures detailed information on borehole drilling and construction activities conducted across selected sites in Malawi between 2018 and 2024. Data were collected using the mWater digital platform, documenting each stage of groundwater development, from site selection and hydrogeological studies to drilling operations, borehole design, and post-construction assessments.
+#'
 #' @format A tibble with 152 rows and 138 variables
 #' \describe{
 #'   \item{date_of_drilling}{The date when drilling was carried out.}
-#'   \item{water_point_created}{Indicates whether the water point has been created ("Yes" or "No").}
+#'   \item{water_point_created}{Indicates whether the water point has been created}
 #'   \item{latitude}{The geographic latitude of the drilling site.}
 #'   \item{longtude}{The geographic longitude of the drilling site.}
-#'   \item{use_of_waterpoint}{The intended use of the water point (e.g., for drinking, irrigation, etc.).}
+#'   \item{use_of_waterpoint}{The intended use of the water point}
 #'   \item{other_useage}{Any additional usage of the water point not covered by the standard categories.}
-#'   \item{funding_source}{The source of funding for the drilling project (e.g., government, NGO, private).}
+#'   \item{funding_source}{The source of funding for the drilling project}
 #'   \item{wrb1a_form_completed}{Indicates whether the WRB1A form for the drilling project has been completed.}
 #'   \item{contract_signed}{Whether a contract has been signed for the drilling project.}
 #'   \item{community_agreement}{Whether an agreement with the community has been made regarding the water point.}
@@ -26,10 +20,10 @@
 #'   \item{staff_experienced}{Indicates whether the staff involved in the drilling project are experienced.}
 #'   \item{drilling_rig_model}{The model of the drilling rig used for the project.}
 #'   \item{compressor_specs}{Specifications of the compressor used during the drilling.}
-#'   \item{equipment_condition}{The condition of the drilling equipment (e.g., new, used, needs repair).}
+#'   \item{equipment_condition}{The condition of the drilling equipment}
 #'   \item{safety_features_condition}{The condition of the safety features of the equipment.}
 #'   \item{equipment_capability}{The overall capability of the equipment used in drilling.}
-#'   \item{equipment_capability_specs}{Specifications related to the equipment�s capabilities.}
+#'   \item{equipment_capability_specs}{Specifications related to the equipments capabilities.}
 #'   \item{ppe_available}{Indicates whether personal protective equipment (PPE) is available for the workers.}
 #'   \item{drilling_equipment_image}{An image of the drilling equipment used in the project.}
 #'   \item{location_selection_methodology}{The methodology used to select the drilling location.}
@@ -38,11 +32,11 @@
 #'   \item{min_distance_50m_from_contamination}{The minimum distance (in meters) the drilling site is from contamination sources (50 meters or more).}
 #'   \item{distance_from_contamination}{The distance of the drilling site from any contamination sources.}
 #'   \item{location_accessible}{Indicates whether the site is accessible for drilling.}
-#'   \item{location_suitable_for_drilling}{Indicates whether the site is suitable for drilling (e.g., no obstacles).}
-#'   \item{distance_from_water_bodies}{The distance of the drilling site from nearby water bodies (rivers, lakes, etc.).}
+#'   \item{location_suitable_for_drilling}{Indicates whether the site is suitable for drilling}
+#'   \item{distance_from_water_bodies}{The distance of the drilling site from nearby water bodies}
 #'   \item{location_photo}{A photograph of the drilling site location.}
 #'   \item{perimeter_fence}{Indicates whether there is a perimeter fence around the site for security.}
-#'   \item{staff_protected}{Indicates whether the staff are protected from potential risks (e.g., fencing, safety measures).}
+#'   \item{staff_protected}{Indicates whether the staff are protected from potential risks}
 #'   \item{parking_area}{Indicates whether a parking area is available for vehicles at the site.}
 #'   \item{emergency_access}{Indicates whether there is easy emergency access to the site.}
 #'   \item{suitable_distance_from_power_lines}{Indicates whether the site is located at a suitable distance from power lines.}
@@ -51,11 +45,11 @@
 #'   \item{chemicals_stored_safely}{Indicates whether chemicals are stored safely on-site.}
 #'   \item{first_aid_kit}{Indicates whether a first aid kit is available at the site.}
 #'   \item{fire_extinguisher}{Indicates whether a fire extinguisher is available at the site.}
-#'   \item{adquate_welfare_facilities}{Indicates whether the welfare facilities (toilets, etc.) are adequate for the workers.}
-#'   \item{welfare_facilities_distance}{The distance of the welfare facilities (e.g., toilets) from the drilling site.}
+#'   \item{adquate_welfare_facilities}{Indicates whether the welfare facilities are adequate for the workers.}
+#'   \item{welfare_facilities_distance}{The distance of the welfare facilitiesfrom the drilling site.}
 #'   \item{site_setup_preliminaries_completed}{Indicates whether the preliminary setup activities for drilling have been completed.}
 #'   \item{rig_setup_properly}{Indicates whether the drilling rig has been set up properly.}
-#'   \item{reference_point}{A reference point used for the drilling site�s coordinates or location.}
+#'   \item{reference_point}{A reference point used for the drilling sites coordinates or location.}
 #'   \item{reference_point_height}{The height of the reference point above or below sea level.}
 #'   \item{rig_level_method}{The method used to level the drilling rig at the site.}
 #'   \item{rig_setup_problems}{Any issues encountered during the setup of the drilling rig.}
@@ -65,7 +59,7 @@
 #'   \item{min_diameter}{The minimum diameter of the borehole for drilling.}
 #'   \item{casing_stored_properly}{Indicates whether the casing materials are stored properly.}
 #'   \item{where_stored}{The location where the casing materials are stored.}
-#'   \item{why_not_properly_stored}{Indicates why the casing materials were not stored properly (if applicable).}
+#'   \item{why_not_properly_stored}{Indicates why the casing materials were not stored properly.}
 #'   \item{index_1}{An index value for referencing in the dataset.}
 #'   \item{rod_number}{The number of rods used during the drilling process.}
 #'   \item{depth_from_1}{The starting depth (in meters) for the first drilling operation.}
@@ -88,7 +82,7 @@
 #'   \item{colour}{The color of the rock or soil encountered during drilling.}
 #'   \item{weathering}{The level of weathering observed in the rock or soil encountered.}
 #'   \item{grain_size_description}{A description of the grain size of the soil or rock.}
-#'   \item{sorting}{The sorting characteristics of the soil or rock (e.g., well-sorted, poorly sorted).}
+#'   \item{sorting}{The sorting characteristics of the soil or rock (e.g. well-sorted, poorly sorted).}
 #'   \item{additional_description}{Any additional description related to the geological formation or drilling process.}
 #'   \item{formation_name}{The name of the geological formation encountered during drilling.}
 #'   \item{index_4}{An index value for referencing in the dataset.}
@@ -98,12 +92,12 @@
 #'   \item{ec_ms_cm_1}{The electrical conductivity of the water at the first measurement point (in mS/cm).}
 #'   \item{tds_mgl_1}{The total dissolved solids (TDS) in the water at the first measurement point (in mg/L).}
 #'   \item{ph_1}{The pH of the water at the first measurement point.}
-#'   \item{temp_celcius_1}{The temperature of the water at the first measurement point (in �C).}
-#'   \item{comments_1}{Comments related to the first measurement point (e.g., water quality, observations).}
+#'   \item{temp_celcius_1}{The temperature of the water at the first measurement point (in Celcius).}
+#'   \item{comments_1}{Comments related to the first measurement point (e.g. water quality, observations).}
 #'   \item{borehole_depth_miters}{The total depth of the borehole (in meters).}
 #'   \item{water_level}{The water level in the borehole after drilling (in meters).}
 #'   \item{measurement_date}{The date when measurements were taken for water level, discharge, etc.}
-#'   \item{borehole_suitable_further_use}{Whether the borehole is suitable for further use (e.g., for a pump, additional development).}
+#'   \item{borehole_suitable_further_use}{Whether the borehole is suitable for further use (e.g. for a pump, additional development).}
 #'   \item{installation_design_available}{Whether a design is available for installing equipment in the borehole.}
 #'   \item{design_agreed_by_driller}{Whether the design was agreed upon by the driller.}
 #'   \item{date_casing_installation}{The date when the casing was installed in the borehole.}
@@ -135,7 +129,7 @@
 #'   \item{static_water_level_pre_dev}{The static water level before development work begins (in meters).}
 #'   \item{index_11}{An index value for referencing in the dataset.}
 #'   \item{duration}{The total duration of the drilling process (in hours or days).}
-#'   \item{method}{The method used for the drilling process (e.g., rotary, percussion).}
+#'   \item{method}{The method used for the drilling process (e.g. rotary, percussion).}
 #'   \item{index_12}{An index value for referencing in the dataset.}
 #'   \item{time}{The amount of time taken for specific drilling operations (in minutes).}
 #'   \item{lift_depth}{The depth at which the lift occurs during the drilling operation (in meters).}
@@ -143,7 +137,7 @@
 #'   \item{ec_ms_cm_3}{The electrical conductivity of the water at a later measurement point (in mS/cm).}
 #'   \item{tds_mg_l_2}{The total dissolved solids (TDS) in the water at a later measurement point (in mg/L).}
 #'   \item{ph_3}{The pH of the water at a later measurement point.}
-#'   \item{temp_c_2}{The temperature of the water at a later measurement point (in �C).}
+#'   \item{temp_c_2}{The temperature of the water at a later measurement point (in Celcius).}
 #'   \item{turbidity_ntu}{The turbidity of the water (cloudiness) measured in NTU (Nephelometric Turbidity Units).}
 #'   \item{sediment}{The amount or type of sediment in the water at a later measurement point.}
 #'   \item{static_water_level_post_dev}{The static water level after development work is done (in meters).}
