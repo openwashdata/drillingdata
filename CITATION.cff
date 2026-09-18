@@ -8,7 +8,7 @@ message: 'To cite package "drillingdata" in publications use:'
 type: dataset
 license: CC-BY-4.0
 title: 'drillingdata: Borehole Drilling and Construction Data – Malawi, 2018 - 2024'
-version: 0.0.0.9000
+version: 1.0.1
 doi: 10.5281/zenodo.17543305
 abstract: This dataset captures detailed information on borehole drilling and construction
   activities conducted across selected sites in Malawi in 2018. Data were collected

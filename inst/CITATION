@@ -17,4 +17,4 @@ bibentry(bibtype = "Misc",
          url = "https://github.com/openwashdata/drillingdata",
          abstract = "This dataset captures detailed information on borehole drilling and construction activities conducted across selected sites in Malawi in 2018. Data were collected using the mWater digital platform, documenting each stage of groundwater development, from site selection and hydrogeological studies to drilling operations, borehole design, and post-construction assessments.",
          keywords = "open data,washdata,boreholes,drilling,groundwater,water supply,Malawi,borehole,sanitation,wash",
-         version = "0.0.0.9000")
+         version = "1.0.1")
