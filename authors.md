@@ -14,7 +14,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/openwashdata/drillingdata/blob/main/inst/CITATION)
+[`inst/CITATION`](https://github.com/openwashdata/drillingdata/blob/v1.0.1/inst/CITATION)
 
 Mhango E, Rattray J, MacLeod S, Bwanyula F (2026). “drillingdata:
 Borehole Drilling and Construction Data – Malawi, 2018 - 2024.”
