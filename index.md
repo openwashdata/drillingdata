@@ -1,0 +1,316 @@
+# Borehole Drilling and Construction Data – Malawi, 2018 - 2024
+
+[![DOI](https://zenodo.org/badge/962516844.svg)](https://doi.org/10.5281/zenodo.17543305)
+[![R-CMD-check](https://github.com/openwashdata/drillingdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/drillingdata/actions/workflows/R-CMD-check.yaml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17543305.svg)](https://zenodo.org/doi/10.5281/zenodo.17543305)
+
+This dataset captures detailed information on borehole drilling and
+construction activities conducted across selected sites in Malawi
+between 2018 and 2024. Data were collected using the mWater digital
+platform, documenting each stage of groundwater development, from site
+selection and hydrogeological studies to drilling operations, borehole
+design, and post-construction assessments.
+
+The dataset includes variables on location and site suitability, survey
+and geophysical methods, drilling parameters, equipment and safety
+compliance, geological formations encountered, casing and gravel pack
+details, and initial water quality measurements. Together, these data
+provide a comprehensive technical record of Malawi’s borehole
+development process.
+
+**Potential Use Cases**
+
+This dataset is valuable to a wide range of stakeholders, including:
+
+1.  Government Water Departments and District Councils: for monitoring
+    drilling quality, verifying contractor performance, and maintaining
+    an updated inventory of functional water points.
+
+2.  Development Partners and NGOs: for planning new water supply
+    interventions, assessing borehole performance, and improving
+    accountability in donor-funded projects.
+
+3.  Hydrogeologists and WASH Engineers: for analyzing aquifer
+    characteristics, drilling efficiency, and the relationship between
+    geology and borehole productivity.
+
+4.  Researchers and Academic Institutions: for studying groundwater
+    development practices, environmental sustainability, and data-driven
+    approaches to rural water supply.
+
+5.  Policy Makers and Regulators: for strengthening national standards,
+    promoting data transparency, and improving decision-making in the
+    water resources sector.
+
+## Installation
+
+You can install the development version of drillingdata from
+[GitHub](https://github.com/) with:
+
+``` r
+
+# install.packages("devtools")
+devtools::install_github("openwashdata/drillingdata")
+```
+
+``` r
+
+## Run the following code in console if you don't have the packages
+## install.packages(c("dplyr", "knitr", "readr", "stringr", "gt", "kableExtra"))
+library(dplyr)
+library(knitr)
+library(readr)
+library(stringr)
+library(gt)
+library(kableExtra)
+```
+
+Alternatively, you can download the individual datasets as a CSV or XLSX
+file from the table below.
+
+1.  Click Download CSV. A window opens that displays the CSV in your
+    browser.
+2.  Right-click anywhere inside the window and select “Save Page As…”.
+3.  Save the file in a folder of your choice.
+
+| dataset | CSV | XLSX |
+|:---|:---|:---|
+| drillingdata | [Download CSV](https://github.com/openwashdata/drillingdata/raw/main/inst/extdata/drillingdata.csv) | [Download XLSX](https://github.com/openwashdata/drillingdata/raw/main/inst/extdata/drillingdata.xlsx) |
+
+## Data
+
+The package provides access to the variables on location and site
+suitability, survey and geophysical methods, drilling parameters,
+equipment and safety compliance, geological formations encountered,
+casing and gravel pack details, and initial water quality measurements
+
+``` r
+
+library(drillingdata)
+```
+
+### drillingdata
+
+The dataset `drillingdata` contains data 152 observations and 138
+variables
+
+``` r
+
+drillingdata |> 
+  head(3) |> 
+  gt::gt() |>
+  gt::as_raw_html()
+```
+
+| date_of_drilling | water_point_created | latitude | longtude | use_of_waterpoint | other_useage | funding_source | wrb1a_form_completed | contract_signed | community_agreement | gov_supervisor_available | drilling_contractor | driller_licensed | staff_experienced | drilling_rig_model | compressor_specs | equipment_condition | safety_features_condition | equipment_capability | equipment_capability_specs | ppe_available | drilling_equipment_image | location_selection_methodology | hydrogeological_study_done | geophysical_survey_done | min_distance_50m_from_contamination | distance_from_contamination | location_accessible | location_suitable_for_drilling | distance_from_water_bodies | location_photo | perimeter_fence | staff_protected | parking_area | emergency_access | suitable_distance_from_power_lines | distance | materials_stored_safely | chemicals_stored_safely | first_aid_kit | fire_extinguisher | adquate_welfare_facilities | welfare_facilities_distance | site_setup_preliminaries_completed | rig_setup_properly | reference_point | reference_point_height | rig_level_method | rig_setup_problems | setup_problems | drill_rod_length | min_diameter_177mm | min_diameter | casing_stored_properly | where_stored | why_not_properly_stored | index_1 | rod_number | depth_from_1 | depth_to_1 | circulation_method | drill_bit_type | drilling_diameter_mm | time_taken_in_minutes | drilling_comments | water_strike_in_miters | index_2 | depth_from_2 | depth_to_2 | temp_casing_material | temp_casing_diameter | index_3 | depth_from_3 | depth_to_3 | rock_or_soil_type | colour | weathering | grain_size_description | sorting | additional_description | formation_name | index_4 | hole_depth_1 | discharge_rate_1 | discharge_measurement_method | ec_ms_cm_1 | tds_mgl_1 | ph_1 | temp_celcius_1 | comments_1 | borehole_depth_miters | water_level | measurement_date | borehole_suitable_further_use | installation_design_available | design_agreed_by_driller | date_casing_installation | materials_meet_standards | materials_pre_inspected | Index (8) | inner_diameter | outer_diameter | material_1 | slot_aperture | end_cap_fitted | centralisers_fitted | casing_connection_type | index_9 | depth_from_4 | depth_to_4 | casing_inner_diameter | casing_material | casing_material_strength | slotted | gravel_pack_clean | gravel_pack_quality | index_10 | depth_from_5 | depth_to_5 | gravel_min_grain_size | gravel_max_grain_size | gravel_pack_final_level | static_water_level_pre_dev | index_11 | duration | method | index_12 | time | lift_depth | discharge_rate | ec_ms_cm_3 | tds_mg_l_2 | ph_3 | temp_c_2 | turbidity_ntu | sediment | static_water_level_post_dev | final_borehole_design_summary |
+|---:|:---|---:|---:|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|---:|:---|:---|:--:|---:|:---|:---|:---|:---|:--:|---:|---:|---:|---:|:---|:---|---:|---:|:---|---:|---:|---:|---:|:---|---:|---:|---:|---:|:---|:---|:---|:---|:---|:---|:---|---:|---:|---:|:---|---:|---:|---:|---:|:---|---:|---:|:---|:---|:---|:---|---:|:---|:---|---:|---:|---:|:---|---:|:---|:---|:---|---:|---:|---:|---:|:---|:---|:---|:---|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|---:|---:|---:|---:|---:|---:|---:|---:|---:|:---|---:|:---|
+| 25/09/2018 | Yes | -14.90580 | 34.83156 | Other | Water supply to infrastructure distributing to Balaka region | The Scottish Government | Yes | Yes | Yes | Alex Makwinja | OG Madzi | Yes | Yes | PRD 12 tonne | ELGi, PG 1100S - 300 | Yes | Yes | Yes | 120m of rods | Yes | <https://api.mwater.co/v3/images/765588b65a24479bbfcc14fde2ffd918>; <https://api.mwater.co/v3/images/fbf50f1e43b04c90b10ae74fc1b2b36b>; <https://api.mwater.co/v3/images/c83f1d6517fa42e1be36192b6670b092>; <https://api.mwater.co/v3/images/b6bc9b43b9f94e7988bb412bdd406996>; <https://api.mwater.co/v3/images/88270b575a16468d9fe271b262cd997c>; <https://api.mwater.co/v3/images/ebaf5f4897594eb8b43d85a900a3b5e2>; <https://api.mwater.co/v3/images/0d31be9d11a84bdaaa793926844115fa> | The Malawi Government chose potential locations, desk study from UoS Hydrogeologists and Malawi government geophysical surveying identified suitable location and position of drilling site. | Yes | Yes | Yes | 56m | Yes | Yes | Yes | <https://api.mwater.co/v3/images/bd2c21f294214c1f8927456a65200ad4> | Yes | Yes | Yes | Yes | Yes | 20m | Yes | Yes | Yes | Yes | Yes | NA | Yes | Yes | Drilling/Rotary Table | 1.21 | Spirit level on rods | No | NA | 5 | Yes | 355.6mm | No | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 53.37 | NA | NA | Yes | Yes | Yes | 9/28/2018 | Yes | Yes | NA | NA | NA | NA | NA | Yes | Yes | Solvent Cement | NA | NA | NA | NA | NA | NA | NA | Yes | Yes | NA | NA | NA | NA | NA | 14.5 | 15.72 | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 15.72 | NA |
+| 07/12/2018 | Yes | -15.80755 | 35.27729 | Community | NA | Scottish Government | No | Yes | Yes | Susan WMA Chiradzulu Water Office | OG Madzi Drilling Company | Yes | Yes | PRD | ELGI PG 6005 - 200 | Yes | Yes | Yes | NA | Yes | <https://api.mwater.co/v3/images/897ca28c2bda40efa2653b51b4fa6922>; <https://api.mwater.co/v3/images/ba0f3386a2704a1f82d2dd1842c5c082>; <https://api.mwater.co/v3/images/c66bcc72c33d49d3be39363146a24728>; <https://api.mwater.co/v3/images/1c54e24b6a2c443ebf2010634139280f>; <https://api.mwater.co/v3/images/43e2adfbac654f66841f77db92d34329>; <https://api.mwater.co/v3/images/be6b18111db3416584c324c29396f1cb>; <https://api.mwater.co/v3/images/7bf5d9afa0214f1193814db054668c01>; <https://api.mwater.co/v3/images/cf8f6101231543b08b77bd076bf7472f>; <https://api.mwater.co/v3/images/ba74595462274e4ab993bf23b963ec2b>; <https://api.mwater.co/v3/images/ec2e2f1e8de04d009f14a4f755ff9988> | Hydrogelogical Desk Study Needs Assessment Pumping tests at nearby boreholes Geophysical Survey | Yes | Yes | Yes | NA | Yes | Yes | Yes | <https://api.mwater.co/v3/images/6f125ad67b124305ada664ecf6bd20d6> | Yes | Yes | Yes | Yes | Yes | NA | Yes | Yes | Yes | Yes | Yes | NA | Yes | Yes | Drilling/Rotary Table | 1.26 | Spirit level on rods | No | NA | 3 | Yes | NA | Yes | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 55.26 | NA | NA | No | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+| 06/12/2018 | Yes | -15.78484 | 35.23571 | Community | NA | Scottish Government | No | Yes | Yes | Susan WMA Chiradzulu District Water Office | OG Madzi Drilling Company | Yes | Yes | PRD | ELGI PG 6005 - 200 | Yes | Yes | Yes | NA | Yes | <https://api.mwater.co/v3/images/7462ad48f9da48b5a9e606565affd2e6>; <https://api.mwater.co/v3/images/39d841a4f63a46eab6d50f0b987e77b7>; <https://api.mwater.co/v3/images/266edc03cb5a4008b45cf0fe94a69544>; <https://api.mwater.co/v3/images/850bc036169947d891d48a365b97390c>; <https://api.mwater.co/v3/images/873ca691d45f48f79d77e551a1866bc5>; <https://api.mwater.co/v3/images/3df98fa3eabb4f9b86eacfe9c5edcf40>; <https://api.mwater.co/v3/images/8489d502dbf241468f98076e3125f969>; <https://api.mwater.co/v3/images/037f158004eb4d5a9dc88fd5a42479fd> | Hydrogeology Desk Study Needs Assessment Inital forensics at nearby wells Pumping tests at nearby wells Geophysical survey | Yes | Yes | Yes | NA | No | Yes | Yes | <https://api.mwater.co/v3/images/81b39c16b2384c1799095196de24ac6c> | Yes | Yes | Yes | Yes | Yes | NA | Yes | Yes | Yes | Yes | Yes | NA | Yes | Yes | Drilling/Rotary Table | 1.30 | Spirit level on rods | No | NA | 3 | Yes | NA | Yes | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | 55.30 | NA | NA | No | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA | NA |
+
+For an overview of the variable names, see the following table.
+
+| variable_name | variable_type | description |
+|:---|:---|:---|
+| date_of_drilling | character | The date when drilling was carried out. |
+| water_point_created | character | Indicates whether the water point has been created |
+| latitude | numeric | The geographic latitude of the drilling site. |
+| longtude | numeric | The geographic longitude of the drilling site. |
+| use_of_waterpoint | character | The intended use of the water point |
+| other_useage | character | Any additional usage of the water point not covered by the standard categories. |
+| funding_source | character | The source of funding for the drilling project |
+| wrb1a_form_completed | character | Indicates whether the WRB1A form for the drilling project has been completed. |
+| contract_signed | character | Whether a contract has been signed for the drilling project. |
+| community_agreement | character | Whether an agreement with the community has been made regarding the water point. |
+| gov_supervisor_available | character | Indicates whether a government supervisor is available during the drilling process. |
+| drilling_contractor | character | The name of the contractor responsible for the drilling. |
+| driller_licensed | character | Indicates whether the driller is licensed to carry out the drilling. |
+| staff_experienced | character | Indicates whether the staff involved in the drilling project are experienced. |
+| drilling_rig_model | character | The model of the drilling rig used for the project. |
+| compressor_specs | character | Specifications of the compressor used during the drilling. |
+| equipment_condition | character | The condition of the drilling equipment |
+| safety_features_condition | character | The condition of the safety features of the equipment. |
+| equipment_capability | character | The overall capability of the equipment used in drilling. |
+| equipment_capability_specs | character | Specifications related to the equipments capabilities. |
+| ppe_available | character | Indicates whether personal protective equipment (PPE) is available for the workers. |
+| drilling_equipment_image | character | An image of the drilling equipment used in the project. |
+| location_selection_methodology | character | The methodology used to select the drilling location. |
+| hydrogeological_study_done | character | Indicates whether a hydrogeological study has been done at the drilling site. |
+| geophysical_survey_done | character | Indicates whether a geophysical survey has been done at the site. |
+| min_distance_50m_from_contamination | character | The minimum distance (in meters) the drilling site is from contamination sources (50 meters or more). |
+| distance_from_contamination | character | The distance of the drilling site from any contamination sources. |
+| location_accessible | character | Indicates whether the site is accessible for drilling. |
+| location_suitable_for_drilling | character | Indicates whether the site is suitable for drilling |
+| distance_from_water_bodies | character | The distance of the drilling site from nearby water bodies |
+| location_photo | character | A photograph of the drilling site location. |
+| perimeter_fence | character | Indicates whether there is a perimeter fence around the site for security. |
+| staff_protected | character | Indicates whether the staff are protected from potential risks |
+| parking_area | character | Indicates whether a parking area is available for vehicles at the site. |
+| emergency_access | character | Indicates whether there is easy emergency access to the site. |
+| suitable_distance_from_power_lines | character | Indicates whether the site is located at a suitable distance from power lines. |
+| distance | character | The distance from a reference point or key feature to the drilling site. |
+| materials_stored_safely | character | Indicates whether the materials are stored safely at the site. |
+| chemicals_stored_safely | character | Indicates whether chemicals are stored safely on-site. |
+| first_aid_kit | character | Indicates whether a first aid kit is available at the site. |
+| fire_extinguisher | character | Indicates whether a fire extinguisher is available at the site. |
+| adquate_welfare_facilities | character | Indicates whether the welfare facilities are adequate for the workers. |
+| welfare_facilities_distance | character | The distance of the welfare facilitiesfrom the drilling site. |
+| site_setup_preliminaries_completed | character | Indicates whether the preliminary setup activities for drilling have been completed. |
+| rig_setup_properly | character | Indicates whether the drilling rig has been set up properly. |
+| reference_point | character | A reference point used for the drilling sites coordinates or location. |
+| reference_point_height | numeric | The height of the reference point above or below sea level. |
+| rig_level_method | character | The method used to level the drilling rig at the site. |
+| rig_setup_problems | character | Any issues encountered during the setup of the drilling rig. |
+| setup_problems | logical | Boolean indicating whether any setup problems were encountered. |
+| drill_rod_length | numeric | The length of the drill rods used in the drilling operation. |
+| min_diameter_177mm | character | The minimum diameter of the borehole (177mm). |
+| min_diameter | character | The minimum diameter of the borehole for drilling. |
+| casing_stored_properly | character | Indicates whether the casing materials are stored properly. |
+| where_stored | character | The location where the casing materials are stored. |
+| why_not_properly_stored | logical | Indicates why the casing materials were not stored properly. |
+| index_1 | numeric | An index value for referencing in the dataset. |
+| rod_number | numeric | The number of rods used during the drilling process. |
+| depth_from_1 | numeric | The starting depth (in meters) for the first drilling operation. |
+| depth_to_1 | numeric | The ending depth (in meters) for the first drilling operation. |
+| circulation_method | character | The method used for circulating fluids during drilling. |
+| drill_bit_type | character | The type of drill bit used during drilling. |
+| drilling_diameter_mm | numeric | The diameter of the borehole in millimeters. |
+| time_taken_in_minutes | numeric | The total time taken for drilling (in minutes). |
+| drilling_comments | character | Comments related to the drilling process. |
+| water_strike_in_miters | numeric | The depth at which water was first encountered during drilling (in meters). |
+| index_2 | numeric | An index value for referencing in the dataset. |
+| depth_from_2 | numeric | The starting depth (in meters) for the second drilling operation. |
+| depth_to_2 | numeric | The ending depth (in meters) for the second drilling operation. |
+| temp_casing_material | character | The material used for the temporary casing in the borehole. |
+| temp_casing_diameter | numeric | The diameter of the temporary casing (in millimeters). |
+| index_3 | numeric | An index value for referencing in the dataset. |
+| depth_from_3 | numeric | The starting depth (in meters) for the third drilling operation. |
+| depth_to_3 | numeric | The ending depth (in meters) for the third drilling operation. |
+| rock_or_soil_type | character | The type of rock or soil encountered at the drilling site. |
+| colour | character | The color of the rock or soil encountered during drilling. |
+| weathering | character | The level of weathering observed in the rock or soil encountered. |
+| grain_size_description | character | A description of the grain size of the soil or rock. |
+| sorting | character | The sorting characteristics of the soil or rock (e.g. well-sorted, poorly sorted). |
+| additional_description | character | Any additional description related to the geological formation or drilling process. |
+| formation_name | character | The name of the geological formation encountered during drilling. |
+| index_4 | numeric | An index value for referencing in the dataset. |
+| hole_depth_1 | numeric | The depth of the hole for the first section of drilling (in meters). |
+| discharge_rate_1 | numeric | The discharge rate of water from the borehole (in liters per minute or other units). |
+| discharge_measurement_method | character | The method used to measure the discharge rate of the borehole. |
+| ec_ms_cm_1 | numeric | The electrical conductivity of the water at the first measurement point (in mS/cm). |
+| tds_mgl_1 | numeric | The total dissolved solids (TDS) in the water at the first measurement point (in mg/L). |
+| ph_1 | numeric | The pH of the water at the first measurement point. |
+| temp_celcius_1 | numeric | The temperature of the water at the first measurement point (in Celcius). |
+| comments_1 | character | Comments related to the first measurement point (e.g. water quality, observations). |
+| borehole_depth_miters | numeric | The total depth of the borehole (in meters). |
+| water_level | numeric | The water level in the borehole after drilling (in meters). |
+| measurement_date | character | The date when measurements were taken for water level, discharge, etc. |
+| borehole_suitable_further_use | character | Whether the borehole is suitable for further use (e.g. for a pump, additional development). |
+| installation_design_available | character | Whether a design is available for installing equipment in the borehole. |
+| design_agreed_by_driller | character | Whether the design was agreed upon by the driller. |
+| date_casing_installation | character | The date when the casing was installed in the borehole. |
+| materials_meet_standards | character | Whether the materials used in the drilling process meet established standards. |
+| materials_pre_inspected | character | Whether the materials used in the drilling process were pre-inspected. |
+| Index (8) | numeric | An index value for referencing in the dataset. |
+| inner_diameter | numeric | The inner diameter of the casing (in millimeters). |
+| outer_diameter | numeric | The outer diameter of the casing (in millimeters). |
+| material_1 | character | The material used for the first section of the casing. |
+| slot_aperture | numeric | The size of the slot aperture in the casing (in millimeters). |
+| end_cap_fitted | character | Whether an end cap was fitted to the casing. |
+| centralisers_fitted | character | Whether centralizers were fitted in the borehole casing. |
+| casing_connection_type | character | The type of connection used for the casing segments (e.g., threaded, welded). |
+| index_9 | numeric | An index value for referencing in the dataset. |
+| depth_from_4 | numeric | The starting depth (in meters) for the fourth drilling operation. |
+| depth_to_4 | numeric | The ending depth (in meters) for the fourth drilling operation. |
+| casing_inner_diameter | numeric | The inner diameter of the casing (in millimeters). |
+| casing_material | character | The material of the casing used for the borehole. |
+| casing_material_strength | character | The strength of the casing material used in the borehole. |
+| slotted | character | Indicates whether the casing is slotted for water entry. |
+| gravel_pack_clean | character | Indicates whether the gravel pack is clean and free of contaminants. |
+| gravel_pack_quality | character | The quality of the gravel pack used in the borehole. |
+| index_10 | numeric | An index value for referencing in the dataset. |
+| depth_from_5 | numeric | The starting depth (in meters) for the fifth drilling operation. |
+| depth_to_5 | numeric | The ending depth (in meters) for the fifth drilling operation. |
+| gravel_min_grain_size | numeric | The minimum grain size of the gravel used in the pack (in millimeters). |
+| gravel_max_grain_size | numeric | The maximum grain size of the gravel used in the pack (in millimeters). |
+| gravel_pack_final_level | numeric | The final level of the gravel pack after installation (in meters). |
+| static_water_level_pre_dev | numeric | The static water level before development work begins (in meters). |
+| index_11 | numeric | An index value for referencing in the dataset. |
+| duration | numeric | The total duration of the drilling process (in hours or days). |
+| method | character | The method used for the drilling process (e.g. rotary, percussion). |
+| index_12 | numeric | An index value for referencing in the dataset. |
+| time | numeric | The amount of time taken for specific drilling operations (in minutes). |
+| lift_depth | numeric | The depth at which the lift occurs during the drilling operation (in meters). |
+| discharge_rate | numeric | The discharge rate of water from the borehole at a later measurement point (in liters per minute). |
+| ec_ms_cm_3 | numeric | The electrical conductivity of the water at a later measurement point (in mS/cm). |
+| tds_mg_l_2 | numeric | The total dissolved solids (TDS) in the water at a later measurement point (in mg/L). |
+| ph_3 | numeric | The pH of the water at a later measurement point. |
+| temp_c_2 | numeric | The temperature of the water at a later measurement point (in Celcius). |
+| turbidity_ntu | numeric | The turbidity of the water (cloudiness) measured in NTU (Nephelometric Turbidity Units). |
+| sediment | character | The amount or type of sediment in the water at a later measurement point. |
+| static_water_level_post_dev | numeric | The static water level after development work is done (in meters). |
+| final_borehole_design_summary | character | A summary of the final borehole design, including all technical and engineering details. |
+
+## Example
+
+``` r
+
+library(drillingdata)
+
+# Histogram of Borehole Depths
+# Load required packages
+library(ggplot2)
+library(dplyr)
+
+# prepare data
+boreholes_clean <- drillingdata %>%
+  mutate(depth_m = as.numeric(borehole_depth_miters)) %>%
+  filter(!is.na(depth_m))  # remove missing values
+
+# Plot graph
+ggplot(boreholes_clean, aes(x = depth_m)) +
+  geom_histogram(binwidth = 10, fill = "skyblue", color = "black", alpha = 0.8) +
+  labs(
+    title = "Distribution of Borehole Depths",
+    subtitle = "Number of boreholes in different depth ranges",
+    x = "Borehole Depth (meters)",
+    y = "Number of Boreholes"
+  ) +
+  theme_minimal(base_size = 14)
+```
+
+![](reference/figures/README-unnamed-chunk-7-1.png)
+
+## License
+
+Data are available as
+[CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
+
+## Citation
+
+Please cite this package using:
+
+``` r
+
+citation("drillingdata")
+#> To cite package 'drillingdata' in publications use:
+#> 
+#>   Mhango E, Rattray J, MacLeod S, Bwanyula F (2026). "drillingdata:
+#>   Borehole Drilling and Construction Data – Malawi, 2018 - 2024."
+#>   doi:10.5281/zenodo.17543305
+#>   <https://doi.org/10.5281/zenodo.17543305>.
+#>   <https://github.com/openwashdata/drillingdata>.
+#> 
+#> A BibTeX entry for LaTeX users is
+#> 
+#>   @Misc{mhango_etall:2026,
+#>     title = {drillingdata: Borehole Drilling and Construction Data – Malawi, 2018 - 2024},
+#>     author = {Emmanuel Mhango and Jamie Rattray and Shaun MacLeod and Feston Bwanyula},
+#>     year = {2026},
+#>     doi = {10.5281/zenodo.17543305},
+#>     url = {https://github.com/openwashdata/drillingdata},
+#>     abstract = {This dataset captures detailed information on borehole drilling and construction activities conducted across selected sites in Malawi in 2018. Data were collected using the mWater digital platform, documenting each stage of groundwater development, from site selection and hydrogeological studies to drilling operations, borehole design, and post-construction assessments.},
+#>     keywords = {open data,washdata,boreholes,drilling,groundwater,water supply,Malawi,borehole,sanitation,wash},
+#>     version = {1.0.1},
+#>   }
+```
