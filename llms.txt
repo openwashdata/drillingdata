@@ -4,6 +4,8 @@
 [![R-CMD-check](https://github.com/openwashdata/drillingdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/drillingdata/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17543305.svg)](https://zenodo.org/doi/10.5281/zenodo.17543305)
 
+A data package published by [openwashdata](https://openwashdata.org).
+
 This dataset captures detailed information on borehole drilling and
 construction activities conducted across selected sites in Malawi
 between 2018 and 2024. Data were collected using the mWater digital
