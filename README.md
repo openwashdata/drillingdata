@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Borehole Drilling and Construction Data – Malawi, 2018 - 2024
+# Borehole Drilling and Construction Data – Malawi, 2018 - 2024 <a href="https://openwashdata.org"><img src="man/figures/logo.png" align="right" width="120" alt="openwashdata" /></a>
 
 <!-- badges: start -->
 
@@ -12,8 +12,6 @@
 [![R-CMD-check](https://github.com/openwashdata/drillingdata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/openwashdata/drillingdata/actions/workflows/R-CMD-check.yaml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17543305.svg)](https://zenodo.org/doi/10.5281/zenodo.17543305)
 <!-- badges: end -->
-
-A data package published by [openwashdata](https://openwashdata.org).
 
 This dataset captures detailed information on borehole drilling and
 construction activities conducted across selected sites in Malawi
@@ -3409,6 +3407,8 @@ Data are available as
 [CC-BY](https://github.com/openwashdata/%7B%7B%7Bpackagename%7D%7D%7D/blob/main/LICENSE.md).
 
 ## Citation
+
+Published by openwashdata, <https://openwashdata.org>.
 
 Please cite this package using:
 
